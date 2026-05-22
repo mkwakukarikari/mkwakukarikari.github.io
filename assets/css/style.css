@@ -923,4 +923,53 @@ a:hover {
   .skill-grid {
     gap: 24px;
   }
+
+  /* ---- Centering ---- */
+
+  .page-title,
+  .page-subtitle {
+    text-align: center;
+  }
+
+  .section h2 {
+    text-align: center;
+  }
+
+  .tag-list {
+    justify-content: center;
+  }
+
+  .skill-group {
+    text-align: center;
+  }
+
+  .skill-tags {
+    justify-content: center;
+  }
+
+  .see-all {
+    text-align: center;
+  }
+
+  .pub-year {
+    text-align: left;
+  }
+
+  .news-date {
+    font-weight: 600;
+  }
+
+  .cv-header {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-inner {
+    text-align: center;
+  }
+
+  .footer-nav,
+  .footer-contact {
+    align-items: center;
+  }
 }
