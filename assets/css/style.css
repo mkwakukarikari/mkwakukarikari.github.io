@@ -935,6 +935,10 @@ a:hover {
     text-align: center;
   }
 
+  .section p {
+    text-align: center;
+  }
+
   .tag-list {
     justify-content: center;
   }
@@ -951,17 +955,46 @@ a:hover {
     text-align: center;
   }
 
-  .pub-year {
-    text-align: left;
+  .pub-year,
+  .pub-title,
+  .pub-authors,
+  .pub-venue {
+    text-align: center;
+  }
+
+  .pub-actions {
+    display: flex;
+    justify-content: center;
   }
 
   .news-date {
     font-weight: 600;
+    text-align: center;
+  }
+
+  .news-list li {
+    text-align: center;
+  }
+
+  .cv-date,
+  .cv-title,
+  .cv-org {
+    text-align: center;
   }
 
   .cv-header {
     text-align: center;
     align-items: center;
+  }
+
+  .plain-list li {
+    text-align: center;
+  }
+
+  .talk-date,
+  .talk-title,
+  .talk-venue {
+    text-align: center;
   }
 
   .footer-inner {
