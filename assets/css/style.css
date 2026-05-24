@@ -199,16 +199,14 @@ body {
   gap: 44px;
   align-items: center;
   position: relative;
+  z-index: 1;
 }
 
 .hero-map-panel {
-  display: none;
-  position: relative;
-  height: 230px;
-  border-radius: 10px;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   overflow: hidden;
-  border: 1px solid rgba(200,155,60,0.22);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.04);
 }
 
 #city-network {
@@ -220,23 +218,23 @@ body {
 .hero-map-fade {
   position: absolute;
   inset: 0;
-  z-index: 401;
+  z-index: 1;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(8,46,46,0.92) 0%, rgba(8,46,46,0.45) 35%, transparent 68%),
-    linear-gradient(180deg, rgba(8,46,46,0.55) 0%, transparent 28%, transparent 72%, rgba(8,46,46,0.55) 100%);
+    linear-gradient(90deg, rgba(8,46,46,0.94) 0%, rgba(8,46,46,0.86) 25%, rgba(8,46,46,0.65) 50%, rgba(8,46,46,0.3) 75%, rgba(8,46,46,0.12) 100%),
+    linear-gradient(180deg, rgba(8,46,46,0.6) 0%, transparent 20%, transparent 80%, rgba(8,46,46,0.5) 100%);
 }
 
 .hero-map-label {
   position: absolute;
   bottom: 12px;
-  right: 12px;
-  z-index: 402;
+  right: 16px;
+  z-index: 2;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: rgba(200,155,60,0.8);
+  color: rgba(200,155,60,0.75);
   pointer-events: none;
 }
 
@@ -1289,19 +1287,6 @@ a:hover {
   }
 }
 
-/* Desktop: 3-column hero with network panel */
-@media (min-width: 860px) {
-  .hero-inner {
-    grid-template-columns: auto 1fr 360px;
-    align-items: center;
-  }
-  .hero-map-panel {
-    display: block;
-    height: 270px;
-    align-self: center;
-  }
-}
-
 /* Mobile */
 @media (max-width: 680px) {
   .container {
@@ -1319,7 +1304,8 @@ a:hover {
   }
 
   .hero-map-panel {
-    display: none !important;
+    opacity: 0;
+    pointer-events: none;
   }
 
   .hero-photo {
