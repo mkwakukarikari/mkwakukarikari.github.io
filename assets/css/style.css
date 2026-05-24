@@ -209,11 +209,10 @@ body {
   overflow: hidden;
 }
 
-#hero-map {
+#city-network {
   width: 100%;
   height: 100%;
   display: block;
-  filter: sepia(1) hue-rotate(125deg) saturate(2) brightness(0.45) contrast(1.2);
 }
 
 .hero-map-fade {
