@@ -597,6 +597,255 @@ a:hover {
 }
 
 /* ============================================
+   Awards
+   ============================================ */
+
+.award-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.award-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: start;
+}
+
+.award-item:last-child {
+  border-bottom: none;
+}
+
+.award-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 2px;
+}
+
+.award-year {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.award-amount {
+  display: inline-block;
+  background: rgba(200, 155, 60, 0.12);
+  color: #9a6e1a;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(200, 155, 60, 0.3);
+}
+
+.award-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-heading);
+  margin: 0 0 4px;
+}
+
+.award-org {
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ============================================
+   Projects
+   ============================================ */
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-item {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 24px;
+  transition: box-shadow 0.2s;
+}
+
+.project-item:hover {
+  box-shadow: 0 4px 16px rgba(12,68,68,0.1);
+}
+
+.project-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.project-title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.project-year {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-primary);
+  white-space: nowrap;
+  padding-top: 3px;
+}
+
+.project-desc {
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.7;
+  margin: 0 0 14px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-tag {
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(12, 68, 68, 0.07);
+  color: var(--color-primary);
+  border: 1px solid rgba(12, 68, 68, 0.15);
+}
+
+/* ============================================
+   Gallery
+   ============================================ */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.gallery-item {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+  cursor: pointer;
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-item figcaption {
+  padding: 10px 14px 12px;
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+}
+
+/* Lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 5000;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox.open {
+  display: flex;
+}
+
+.lightbox-inner {
+  max-width: 90vw;
+  max-height: 90vh;
+  text-align: center;
+}
+
+#lightbox-img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
+
+#lightbox-caption {
+  color: rgba(255,255,255,0.65);
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+#lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 36px;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+#lightbox-close:hover { opacity: 1; }
+
+#lightbox-prev,
+#lightbox-next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  font-size: 36px;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+#lightbox-prev { left: 16px; }
+#lightbox-next { right: 16px; }
+
+#lightbox-prev:hover,
+#lightbox-next:hover { background: rgba(255,255,255,0.2); }
+
+@media (max-width: 680px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .gallery-item img { height: 140px; }
+  #lightbox-prev { left: 6px; }
+  #lightbox-next { right: 6px; }
+}
+
+/* ============================================
    Talks
    ============================================ */
 
@@ -995,6 +1244,41 @@ a:hover {
   .talk-title,
   .talk-venue {
     text-align: center;
+  }
+
+  .award-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .award-meta {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .award-title,
+  .award-org,
+  .award-year {
+    text-align: center;
+  }
+
+  .award-meta {
+    justify-content: center;
+  }
+
+  .project-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .project-title,
+  .project-desc {
+    text-align: center;
+  }
+
+  .project-tags {
+    justify-content: center;
   }
 
   .footer-inner {
