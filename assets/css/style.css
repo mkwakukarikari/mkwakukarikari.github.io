@@ -750,11 +750,59 @@ a:hover {
   padding-top: 3px;
 }
 
+.project-location {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin: 0 0 18px;
+  font-style: italic;
+}
+
+.project-section {
+  margin-bottom: 18px;
+}
+
+.project-section h3 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--color-primary);
+  margin: 0 0 8px;
+}
+
 .project-desc {
   font-size: 15px;
   color: var(--color-text);
   line-height: 1.7;
-  margin: 0 0 14px;
+  margin: 0 0 10px;
+}
+
+.project-bullets {
+  margin: 0 0 10px 18px;
+  padding: 0;
+}
+
+.project-bullets li {
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.65;
+  margin-bottom: 4px;
+}
+
+.project-link {
+  margin: 14px 0 0;
+  font-size: 13.5px;
+}
+
+.project-link a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.project-link a:hover {
+  color: var(--color-accent);
 }
 
 .project-tags {
