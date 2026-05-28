@@ -1581,3 +1581,142 @@ a:hover {
     align-items: center;
   }
 }
+
+/* ============================================
+   GIS / Geospatial Page
+   ============================================ */
+
+.gis-category {
+  margin-bottom: 56px;
+}
+
+.gis-cat-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: rgba(200,155,60,0.1);
+  border: 1px solid rgba(200,155,60,0.25);
+  border-radius: 4px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+
+.gis-category h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+  font-family: var(--font-serif);
+}
+
+.gis-cat-intro {
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+  font-size: 15px;
+}
+
+.gis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.gis-card {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-bg);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.gis-card:hover {
+  box-shadow: 0 8px 32px rgba(12,68,68,0.12);
+  transform: translateY(-2px);
+}
+
+.gis-card-img {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
+.gis-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gis-card:hover .gis-card-img img {
+  transform: scale(1.04);
+}
+
+.gis-img-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(12,68,68,0.08) 0%, rgba(12,68,68,0.03) 100%);
+}
+
+.gis-img-placeholder svg {
+  opacity: 0.25;
+}
+
+.gis-card-body {
+  padding: 20px 22px 22px;
+}
+
+.gis-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.gis-card-desc {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.gis-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.gis-tool {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--color-primary);
+  background: rgba(12,68,68,0.07);
+  border: 1px solid rgba(12,68,68,0.15);
+  border-radius: 4px;
+  padding: 3px 9px;
+}
+
+.gis-coming-soon {
+  padding: 40px 32px;
+  background: var(--color-bg-alt);
+  border: 1px dashed var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .gis-grid {
+    grid-template-columns: 1fr;
+  }
+}
+}
