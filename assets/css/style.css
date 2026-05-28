@@ -1678,22 +1678,22 @@ a:hover {
 .gis-carousel-btn {
   position: absolute;
   top: 50%; transform: translateY(-50%);
-  width: 34px; height: 34px;
+  width: 38px; height: 38px;
   border-radius: 50%;
-  background: rgba(0,0,0,0.48);
+  background: rgba(0,0,0,0.55);
   backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.22);
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  opacity: 0;
-  transition: opacity 0.2s ease, background 0.2s ease;
+  opacity: 1;
+  transition: background 0.2s ease, transform 0.2s ease;
   z-index: 3;
 }
-.gis-carousel:hover .gis-carousel-btn { opacity: 1; }
-.gis-carousel-btn:hover { background: rgba(0,0,0,0.72); }
+.gis-carousel-btn:hover { background: rgba(0,0,0,0.82); transform: translateY(-50%) scale(1.08); }
+.gis-carousel-btn:active { transform: translateY(-50%) scale(0.95); }
 .gis-carousel-btn.prev { left: 10px; }
 .gis-carousel-btn.next { right: 10px; }
 
@@ -1705,13 +1705,14 @@ a:hover {
   z-index: 3;
 }
 .gis-dot {
-  width: 6px; height: 6px;
+  width: 8px; height: 8px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.5);
   border: none; cursor: pointer; padding: 0;
   transition: background 0.2s, transform 0.2s;
+  touch-action: manipulation;
 }
-.gis-dot.active { background: #fff; transform: scale(1.35); }
+.gis-dot.active { background: #fff; transform: scale(1.4); }
 
 .gis-counter {
   position: absolute;
@@ -1730,19 +1731,19 @@ a:hover {
 .gis-expand {
   position: absolute;
   bottom: 10px; right: 10px;
-  width: 30px; height: 30px;
-  border-radius: 7px;
-  background: rgba(0,0,0,0.42);
+  width: 34px; height: 34px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.55);
   backdrop-filter: blur(4px);
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.22);
   color: #fff;
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  opacity: 0;
-  transition: opacity 0.2s ease;
+  opacity: 1;
+  transition: background 0.2s ease;
   z-index: 3;
 }
-.gis-carousel:hover .gis-expand { opacity: 1; }
+.gis-expand:hover { background: rgba(0,0,0,0.82); }
 
 /* --- Card body --- */
 .gis-card-body {
@@ -1840,7 +1841,16 @@ a:hover {
 
 /* --- Mobile --- */
 @media (max-width: 680px) {
-  .gis-grid { grid-template-columns: 1fr; }
+  .gis-grid { grid-template-columns: 1fr; gap: 20px; }
   .gis-tab { padding: 12px 14px; font-size: 13px; }
-  .gis-lb-nav { display: none; }
+  .gis-carousel-btn { width: 44px; height: 44px; font-size: 22px; opacity: 1; }
+  .gis-carousel-btn.prev { left: 6px; }
+  .gis-carousel-btn.next { right: 6px; }
+  .gis-dot { width: 10px; height: 10px; }
+  .gis-dots { gap: 7px; bottom: 12px; }
+  .gis-expand { width: 38px; height: 38px; bottom: 12px; right: 8px; }
+  .gis-counter { font-size: 12px; top: 8px; right: 8px; }
+  .gis-lb-nav { width: 40px; height: 40px; font-size: 18px; }
+  .gis-lb-nav.prev { left: 8px; }
+  .gis-lb-nav.next { right: 8px; }
 }
