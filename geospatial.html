@@ -14,7 +14,6 @@
 <body>
 
 <div id="progress-bar" aria-hidden="true"></div>
-
 <div id="page-loader" aria-hidden="true">
   <div class="loader-inner">
     <div class="loader-circle"></div>
@@ -44,15 +43,33 @@
   <h1 class="page-title">GIS &amp; Spatial Analysis</h1>
   <p class="page-subtitle">Geospatial analyses, maps, and spatial data visualizations across transportation, urban planning, and health geography.</p>
 
-  <!-- ===== CATEGORY 1: Transportation & Mobility ===== -->
-  <section class="section gis-category">
-    <span class="gis-cat-label">Category 1</span>
-    <h2>Transportation &amp; Mobility</h2>
+  <!-- ===== CATEGORY TABS ===== -->
+  <div class="gis-tabs" role="tablist">
+    <button class="gis-tab active" role="tab" aria-selected="true"  data-target="cat-transport">Transportation &amp; Mobility</button>
+    <button class="gis-tab"        role="tab" aria-selected="false" data-target="cat-urban">Urban &amp; Environmental Planning</button>
+    <button class="gis-tab"        role="tab" aria-selected="false" data-target="cat-health">Health &amp; Spatial Analysis</button>
+  </div>
 
+  <!-- ===== TAB 1: Transportation & Mobility ===== -->
+  <div id="cat-transport" class="gis-tab-panel active" role="tabpanel">
     <div class="gis-grid">
 
-      <!-- Card 1: Network & Accessibility Analysis -->
+      <!-- CARD 1: Network & Accessibility Analysis -->
       <article class="gis-card">
+        <div class="gis-carousel" data-carousel>
+          <img class="gis-ci active" src="Network%20%26%20Accessibility%20Analysis/AL%20OD%20Map.png"       alt="AL Origin-Destination Map">
+          <img class="gis-ci"        src="Network%20%26%20Accessibility%20Analysis/China%20%20Access%20Map.png" alt="China Accessibility Map">
+          <button class="gis-carousel-btn prev" aria-label="Previous">&#8249;</button>
+          <button class="gis-carousel-btn next" aria-label="Next">&#8250;</button>
+          <div class="gis-dots">
+            <button class="gis-dot active" aria-label="Image 1"></button>
+            <button class="gis-dot"        aria-label="Image 2"></button>
+          </div>
+          <span class="gis-counter">1 / 2</span>
+          <button class="gis-expand" aria-label="View full size">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M1.5 1h4v1.5h-2.5v2.5h-1.5v-4zm9 0h4v4h-1.5v-2.5h-2.5v-1.5zm-9 9h1.5v2.5h2.5v1.5h-4v-4zm10.5 2.5v-2.5h1.5v4h-4v-1.5h2.5z"/></svg>
+          </button>
+        </div>
         <div class="gis-card-body">
           <h3 class="gis-card-title">Network &amp; Accessibility Analysis</h3>
           <p class="gis-card-desc">Applied network-based spatial analysis to model movement, accessibility, and connectivity across urban and regional systems. Techniques include shortest path routing, origin–destination (OD) matrix development and flow mapping, accessibility analysis, and network connectivity measures (e.g., Shimbel index) to support transportation and spatial planning decisions.</p>
@@ -63,74 +80,102 @@
             <span class="gis-tool">Microsoft Excel</span>
           </div>
         </div>
-        <div class="gis-gallery" data-gallery>
-          <div class="gis-gallery-main">
-            <img class="gis-main-img" src="Network%20%26%20Accessibility%20Analysis/AL%20OD%20Map.png" alt="AL OD Map">
-          </div>
-          <div class="gis-gallery-thumbs">
-            <img class="gis-thumb active" src="Network%20%26%20Accessibility%20Analysis/AL%20OD%20Map.png" alt="AL OD Map">
-            <img class="gis-thumb" src="Network%20%26%20Accessibility%20Analysis/China%20%20Access%20Map.png" alt="China Access Map">
-          </div>
-        </div>
       </article>
 
-      <!-- Card 2: BRT Network Planning -->
+      <!-- CARD 2: BRT Network Planning -->
       <article class="gis-card">
+        <div class="gis-carousel" data-carousel>
+          <img class="gis-ci active" src="BRT%20line%20Maps/Accra_trotro%20BRT%20New.png"       alt="Accra BRT New Corridors">
+          <img class="gis-ci"        src="BRT%20line%20Maps/Accra_trotro_full.png"               alt="Accra Trotro Full Network">
+          <img class="gis-ci"        src="BRT%20line%20Maps/Accra_trotro_zoom.png"               alt="Accra Trotro Zoom">
+          <img class="gis-ci"        src="BRT%20line%20Maps/image003.jpg"                        alt="BRT Route Map">
+          <img class="gis-ci"        src="BRT%20line%20Maps/image003%20(1).jpg"                  alt="BRT Route Map 2">
+          <img class="gis-ci"        src="BRT%20line%20Maps/Kumasi%20BRT%20Map%201.jpeg"         alt="Kumasi BRT Map 1">
+          <img class="gis-ci"        src="BRT%20line%20Maps/Kumasi%20BRT%20%20Map%202.jpeg"      alt="Kumasi BRT Map 2">
+          <img class="gis-ci"        src="BRT%20line%20Maps/Kumasi%20BRT%20Routes%202%20.jpeg"   alt="Kumasi BRT Routes">
+          <button class="gis-carousel-btn prev" aria-label="Previous">&#8249;</button>
+          <button class="gis-carousel-btn next" aria-label="Next">&#8250;</button>
+          <div class="gis-dots">
+            <button class="gis-dot active" aria-label="Image 1"></button>
+            <button class="gis-dot"        aria-label="Image 2"></button>
+            <button class="gis-dot"        aria-label="Image 3"></button>
+            <button class="gis-dot"        aria-label="Image 4"></button>
+            <button class="gis-dot"        aria-label="Image 5"></button>
+            <button class="gis-dot"        aria-label="Image 6"></button>
+            <button class="gis-dot"        aria-label="Image 7"></button>
+            <button class="gis-dot"        aria-label="Image 8"></button>
+          </div>
+          <span class="gis-counter">1 / 8</span>
+          <button class="gis-expand" aria-label="View full size">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M1.5 1h4v1.5h-2.5v2.5h-1.5v-4zm9 0h4v4h-1.5v-2.5h-2.5v-1.5zm-9 9h1.5v2.5h2.5v1.5h-4v-4zm10.5 2.5v-2.5h1.5v4h-4v-1.5h2.5z"/></svg>
+          </button>
+        </div>
         <div class="gis-card-body">
           <h3 class="gis-card-title">Bus Rapid Transit (BRT) Network Planning: Accra and Kumasi</h3>
-          <p class="gis-card-desc">Mapped and analyzed proposed BRT corridors in Accra and Kumasi to assess connectivity, corridor coverage, and alignment with major activity centers. The map highlights priority routes and their potential to improve urban mobility and reduce congestion.</p>
+          <p class="gis-card-desc">Mapped and analyzed proposed BRT corridors in Accra and Kumasi to assess connectivity, corridor coverage, and alignment with major activity centers. The maps highlight priority routes and their potential to improve urban mobility and reduce congestion.</p>
           <div class="gis-tools">
             <span class="gis-tool">QGIS</span>
             <span class="gis-tool">ArcGIS Pro</span>
             <span class="gis-tool">Google My Maps</span>
           </div>
         </div>
-        <div class="gis-gallery" data-gallery>
-          <div class="gis-gallery-main">
-            <img class="gis-main-img" src="BRT%20line%20Maps/Accra_trotro%20BRT%20New.png" alt="Accra BRT Map">
-          </div>
-          <div class="gis-gallery-thumbs">
-            <img class="gis-thumb active" src="BRT%20line%20Maps/Accra_trotro%20BRT%20New.png" alt="Accra BRT New">
-            <img class="gis-thumb" src="BRT%20line%20Maps/Accra_trotro_full.png" alt="Accra Trotro Full">
-            <img class="gis-thumb" src="BRT%20line%20Maps/Accra_trotro_zoom.png" alt="Accra Trotro Zoom">
-            <img class="gis-thumb" src="BRT%20line%20Maps/image003.jpg" alt="BRT Map">
-            <img class="gis-thumb" src="BRT%20line%20Maps/image003%20(1).jpg" alt="BRT Map 2">
-            <img class="gis-thumb" src="BRT%20line%20Maps/Kumasi%20BRT%20Map%201.jpeg" alt="Kumasi BRT Map 1">
-            <img class="gis-thumb" src="BRT%20line%20Maps/Kumasi%20BRT%20%20Map%202.jpeg" alt="Kumasi BRT Map 2">
-            <img class="gis-thumb" src="BRT%20line%20Maps/Kumasi%20BRT%20Routes%202%20.jpeg" alt="Kumasi BRT Routes">
-          </div>
-        </div>
       </article>
 
-      <!-- Card 3: TAZ Income Assessment -->
+      <!-- CARD 3: TAZ Income Assessment -->
       <article class="gis-card">
+        <div class="gis-carousel" data-carousel>
+          <img class="gis-ci active" src="Income%20Analysis/Center.jpg" alt="TAZ Income Center">
+          <img class="gis-ci"        src="Income%20Analysis/N-E.jpg"    alt="TAZ Income North-East">
+          <img class="gis-ci"        src="Income%20Analysis/N-W.jpg"    alt="TAZ Income North-West">
+          <img class="gis-ci"        src="Income%20Analysis/S-E.jpg"    alt="TAZ Income South-East">
+          <img class="gis-ci"        src="Income%20Analysis/S-W.jpg"    alt="TAZ Income South-West">
+          <button class="gis-carousel-btn prev" aria-label="Previous">&#8249;</button>
+          <button class="gis-carousel-btn next" aria-label="Next">&#8250;</button>
+          <div class="gis-dots">
+            <button class="gis-dot active" aria-label="Image 1"></button>
+            <button class="gis-dot"        aria-label="Image 2"></button>
+            <button class="gis-dot"        aria-label="Image 3"></button>
+            <button class="gis-dot"        aria-label="Image 4"></button>
+            <button class="gis-dot"        aria-label="Image 5"></button>
+          </div>
+          <span class="gis-counter">1 / 5</span>
+          <button class="gis-expand" aria-label="View full size">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M1.5 1h4v1.5h-2.5v2.5h-1.5v-4zm9 0h4v4h-1.5v-2.5h-2.5v-1.5zm-9 9h1.5v2.5h2.5v1.5h-4v-4zm10.5 2.5v-2.5h1.5v4h-4v-1.5h2.5z"/></svg>
+          </button>
+        </div>
         <div class="gis-card-body">
           <h3 class="gis-card-title">Traffic Analysis Zone (TAZ) Income Assessment for BRT Planning</h3>
-          <p class="gis-card-desc">Analyzed income distribution across Traffic Analysis Zones (TAZs) to evaluate equity and accessibility implications of proposed BRT corridors. The map identifies underserved low-income areas and informs route prioritization for more inclusive transit planning.</p>
+          <p class="gis-card-desc">Analyzed income distribution across Traffic Analysis Zones (TAZs) to evaluate equity and accessibility implications of proposed BRT corridors. The maps identify underserved low-income areas and inform route prioritization for more inclusive transit planning.</p>
           <div class="gis-tools">
             <span class="gis-tool">SPSS</span>
             <span class="gis-tool">Google My Maps</span>
           </div>
         </div>
-        <div class="gis-gallery" data-gallery>
-          <div class="gis-gallery-main">
-            <img class="gis-main-img" src="Income%20Analysis/Center.jpg" alt="TAZ Center Income Map">
-          </div>
-          <div class="gis-gallery-thumbs">
-            <img class="gis-thumb active" src="Income%20Analysis/Center.jpg" alt="Center">
-            <img class="gis-thumb" src="Income%20Analysis/N-E.jpg" alt="North-East">
-            <img class="gis-thumb" src="Income%20Analysis/N-W.jpg" alt="North-West">
-            <img class="gis-thumb" src="Income%20Analysis/S-E.jpg" alt="South-East">
-            <img class="gis-thumb" src="Income%20Analysis/S-W.jpg" alt="South-West">
-          </div>
-        </div>
       </article>
 
-      <!-- Card 4: Victoria Action Planning -->
+      <!-- CARD 4: Municipality of Victoria -->
       <article class="gis-card">
+        <div class="gis-carousel" data-carousel>
+          <img class="gis-ci active" src="Municipaility%20of%20Victoria/Municipality%20of%20Victoria.png"           alt="Municipality of Victoria Overview">
+          <img class="gis-ci"        src="Municipaility%20of%20Victoria/Victoria%20Land%20Use%20Map.png"            alt="Victoria Land Use Map">
+          <img class="gis-ci"        src="Municipaility%20of%20Victoria/Victoria%20Population%20Density%20Map.png"  alt="Victoria Population Density Map">
+          <img class="gis-ci"        src="Municipaility%20of%20Victoria/Victoria%20Zoning%20Map.png"                alt="Victoria Zoning Map">
+          <button class="gis-carousel-btn prev" aria-label="Previous">&#8249;</button>
+          <button class="gis-carousel-btn next" aria-label="Next">&#8250;</button>
+          <div class="gis-dots">
+            <button class="gis-dot active" aria-label="Image 1"></button>
+            <button class="gis-dot"        aria-label="Image 2"></button>
+            <button class="gis-dot"        aria-label="Image 3"></button>
+            <button class="gis-dot"        aria-label="Image 4"></button>
+          </div>
+          <span class="gis-counter">1 / 4</span>
+          <button class="gis-expand" aria-label="View full size">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M1.5 1h4v1.5h-2.5v2.5h-1.5v-4zm9 0h4v4h-1.5v-2.5h-2.5v-1.5zm-9 9h1.5v2.5h2.5v1.5h-4v-4zm10.5 2.5v-2.5h1.5v4h-4v-1.5h2.5z"/></svg>
+          </button>
+        </div>
         <div class="gis-card-body">
           <h3 class="gis-card-title">Municipality of Victoria Action Planning Framework and Spatial Analysis</h3>
-          <p class="gis-card-desc">Developed a spatially informed action planning framework for the Municipality of Victoria by integrating GIS-based analysis of land use, infrastructure, and community needs. Produced maps to support decision-making, priority setting, and sustainable urban development strategies.</p>
+          <p class="gis-card-desc">Developed a spatially informed action planning framework for the Municipality of Victoria by integrating GIS-based analysis of land use, infrastructure, and community needs. Maps support decision-making, priority setting, and sustainable urban development strategies.</p>
           <div class="gis-tools">
             <span class="gis-tool">ArcGIS</span>
             <span class="gis-tool">QGIS</span>
@@ -138,37 +183,31 @@
             <span class="gis-tool">Google My Maps</span>
           </div>
         </div>
-        <div class="gis-gallery" data-gallery>
-          <div class="gis-gallery-main">
-            <img class="gis-main-img" src="Municipaility%20of%20Victoria/Municipality%20of%20Victoria.png" alt="Municipality of Victoria">
-          </div>
-          <div class="gis-gallery-thumbs">
-            <img class="gis-thumb active" src="Municipaility%20of%20Victoria/Municipality%20of%20Victoria.png" alt="Municipality Overview">
-            <img class="gis-thumb" src="Municipaility%20of%20Victoria/Victoria%20Land%20Use%20Map.png" alt="Land Use Map">
-            <img class="gis-thumb" src="Municipaility%20of%20Victoria/Victoria%20Population%20Density%20Map.png" alt="Population Density Map">
-            <img class="gis-thumb" src="Municipaility%20of%20Victoria/Victoria%20Zoning%20Map.png" alt="Zoning Map">
-          </div>
-        </div>
       </article>
 
     </div>
-  </section>
+  </div><!-- /cat-transport -->
 
-  <!-- ===== CATEGORY 2: Urban & Environmental Planning ===== -->
-  <section class="section gis-category">
-    <span class="gis-cat-label">Category 2</span>
-    <h2>Urban &amp; Environmental Planning</h2>
+  <!-- ===== TAB 2: Urban & Environmental Planning ===== -->
+  <div id="cat-urban" class="gis-tab-panel" role="tabpanel">
     <div class="gis-coming-soon">Content coming soon.</div>
-  </section>
+  </div>
 
-  <!-- ===== CATEGORY 3: Health & Spatial Analysis ===== -->
-  <section class="section gis-category">
-    <span class="gis-cat-label">Category 3</span>
-    <h2>Health &amp; Spatial Analysis</h2>
+  <!-- ===== TAB 3: Health & Spatial Analysis ===== -->
+  <div id="cat-health" class="gis-tab-panel" role="tabpanel">
     <div class="gis-coming-soon">Content coming soon.</div>
-  </section>
+  </div>
 
 </main>
+
+<!-- ===== LIGHTBOX ===== -->
+<div id="gis-lb" class="gis-lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="gis-lb-close" id="gis-lb-close" aria-label="Close">&times;</button>
+  <button class="gis-lb-nav prev" id="gis-lb-prev" aria-label="Previous">&#8249;</button>
+  <img class="gis-lb-img" id="gis-lb-img" src="" alt="">
+  <button class="gis-lb-nav next" id="gis-lb-next" aria-label="Next">&#8250;</button>
+  <div class="gis-lb-caption" id="gis-lb-caption"></div>
+</div>
 
 <footer class="footer">
   <div class="footer-canvas-panel" aria-hidden="true"><canvas id="footer-network"></canvas></div>
@@ -207,21 +246,93 @@
 <button id="back-to-top" aria-label="Back to top">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
+
 <script src="assets/js/main.js"></script>
 <script src="assets/js/enhancements.js"></script>
 <script src="assets/js/citynetwork.js"></script>
 <script>
-  document.querySelectorAll('[data-gallery]').forEach(function(gallery) {
-    var mainImg = gallery.querySelector('.gis-main-img');
-    gallery.querySelectorAll('.gis-thumb').forEach(function(thumb) {
-      thumb.addEventListener('click', function() {
-        mainImg.src = this.src;
-        mainImg.alt = this.alt;
-        gallery.querySelectorAll('.gis-thumb').forEach(function(t) { t.classList.remove('active'); });
-        this.classList.add('active');
-      });
+(function () {
+  /* ---- Tabs ---- */
+  var tabs   = document.querySelectorAll('.gis-tab');
+  var panels = document.querySelectorAll('.gis-tab-panel');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      panels.forEach(function (p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      document.getElementById(tab.dataset.target).classList.add('active');
     });
   });
+
+  /* ---- Carousels ---- */
+  document.querySelectorAll('[data-carousel]').forEach(function (car) {
+    var imgs    = car.querySelectorAll('.gis-ci');
+    var dots    = car.querySelectorAll('.gis-dot');
+    var counter = car.querySelector('.gis-counter');
+    var n = imgs.length;
+    var cur = 0;
+
+    if (n > 1 && counter) counter.classList.add('show');
+
+    function go(i) {
+      imgs[cur].classList.remove('active');
+      dots[cur].classList.remove('active');
+      cur = (i + n) % n;
+      imgs[cur].classList.add('active');
+      dots[cur].classList.add('active');
+      if (counter) counter.textContent = (cur + 1) + ' / ' + n;
+    }
+
+    car.querySelector('.prev').addEventListener('click', function (e) { e.stopPropagation(); go(cur - 1); });
+    car.querySelector('.next').addEventListener('click', function (e) { e.stopPropagation(); go(cur + 1); });
+    dots.forEach(function (dot, i) { dot.addEventListener('click', function () { go(i); }); });
+
+    /* expand → lightbox */
+    car.querySelector('.gis-expand').addEventListener('click', function (e) {
+      e.stopPropagation();
+      openLightbox(Array.from(imgs), cur);
+    });
+  });
+
+  /* ---- Lightbox ---- */
+  var lb      = document.getElementById('gis-lb');
+  var lbImg   = document.getElementById('gis-lb-img');
+  var lbCap   = document.getElementById('gis-lb-caption');
+  var lbImgs  = [];
+  var lbCur   = 0;
+
+  function openLightbox(imgs, idx) {
+    lbImgs = imgs; lbCur = idx;
+    updateLb();
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function updateLb() {
+    lbImg.src = lbImgs[lbCur].src;
+    lbImg.alt = lbImgs[lbCur].alt;
+    lbCap.textContent = (lbCur + 1) + ' / ' + lbImgs.length + (lbImgs[lbCur].alt ? '  ·  ' + lbImgs[lbCur].alt : '');
+  }
+
+  document.getElementById('gis-lb-close').addEventListener('click', closeLightbox);
+  lb.addEventListener('click', function (e) { if (e.target === lb) closeLightbox(); });
+  document.getElementById('gis-lb-prev').addEventListener('click', function () {
+    lbCur = (lbCur - 1 + lbImgs.length) % lbImgs.length; updateLb();
+  });
+  document.getElementById('gis-lb-next').addEventListener('click', function () {
+    lbCur = (lbCur + 1) % lbImgs.length; updateLb();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape')      closeLightbox();
+    if (e.key === 'ArrowLeft')   { lbCur = (lbCur - 1 + lbImgs.length) % lbImgs.length; updateLb(); }
+    if (e.key === 'ArrowRight')  { lbCur = (lbCur + 1) % lbImgs.length; updateLb(); }
+  });
+})();
 </script>
 </body>
 </html>
