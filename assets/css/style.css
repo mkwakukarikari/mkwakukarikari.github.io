@@ -524,6 +524,29 @@ a:hover {
   color: #fff;
 }
 
+.btn-scholar {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 11px;
+  background: none;
+  border: 1px solid rgba(12,68,68,0.25);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  line-height: 1.5;
+}
+
+.btn-scholar:hover {
+  background: #1a73e8;
+  border-color: #1a73e8;
+  color: #fff;
+}
+
 .cite-toast {
   position: fixed;
   bottom: 88px;
